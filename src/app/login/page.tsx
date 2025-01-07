@@ -37,6 +37,7 @@ export default function LoginPage() {
         setError(result.error || 'Invalid email or password');
       }
     } catch (err) {
+      console.error('Login error:', err);
       setError('An error occurred. Please try again.');
     } finally {
       setLoading(false);
@@ -108,7 +109,7 @@ export default function LoginPage() {
           </form>
 
           <p className="text-center mt-6 text-gray-200">
-            Don't have an account?{' '}
+            Don&apos;t have an account?{' '}
             <Link href="/signup" className="text-blue-400 hover:text-blue-300 transition-colors duration-300">
               Sign up
             </Link>
